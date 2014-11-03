@@ -18,6 +18,7 @@ package com.shaketobug.ui;
 import java.io.File;
 import java.util.concurrent.ExecutionException;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -47,7 +48,7 @@ import com.shaketobug.ShaketobugConfig;
 import com.shaketobug.ShaketobugManager;
 import com.shaketobug.ShaketobugSession;
 
-public class FeedbackActivity extends Activity implements OnTouchListener {
+@SuppressLint("NewApi") public class FeedbackActivity extends Activity implements OnTouchListener {
 
 	public static final String PATH_STRING = "com.shaketobug.ui.FeedbackActivity";
 
@@ -63,7 +64,7 @@ public class FeedbackActivity extends Activity implements OnTouchListener {
 	private Bitmap backgroundBitmap;
 	float downx = 0, downy = 0, upx = 0, upy = 0;
 
-	@SuppressWarnings("deprecation")
+	@SuppressLint("NewApi") @SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
@@ -82,15 +83,8 @@ public class FeedbackActivity extends Activity implements OnTouchListener {
 		mScreenImageView.setDrawingCacheEnabled(true);
 		mScreenImageView.setOnTouchListener(this);
 		
-		int sdk = android.os.Build.VERSION.SDK_INT;
-		if (sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-			mScreenImageView.setBackgroundDrawable(new BitmapDrawable(
-					getResources(), backgroundBitmap));
-		} else {
-			mScreenImageView.setBackground(new BitmapDrawable(getResources(),
-					backgroundBitmap));
-		}
-
+		mScreenImageView.setBackground(new BitmapDrawable(getResources(),
+				backgroundBitmap));
 		startScreenshotAnimation();
 		setupPaintConfigs();	
 	}
@@ -99,14 +93,14 @@ public class FeedbackActivity extends Activity implements OnTouchListener {
 	 * Setup action bar with library configurations
 	 */
 	private void setupCustomActionbar() {
-		getActionBar().setBackgroundDrawable(new ColorDrawable(mConfig.getActionbarColor()));
-		if (mConfig.getActionbarBackgrounDrawable() != Integer.MIN_VALUE) {
-			Drawable actionbarDrawable = getResources().getDrawable(mConfig.getActionbarBackgrounDrawable());
-			getActionBar().setBackgroundDrawable(actionbarDrawable);
-		}
-		
-		getActionBar().setIcon(android.R.color.transparent);
-		getActionBar().setDisplayHomeAsUpEnabled(true);
+//		getSupportActionBar().setBackgroundDrawable(new ColorDrawable(mConfig.getActionbarColor()));
+//		if (mConfig.getActionbarBackgrounDrawable() != Integer.MIN_VALUE) {
+//			Drawable actionbarDrawable = getResources().getDrawable(mConfig.getActionbarBackgrounDrawable());
+//			getActionBar().setBackgroundDrawable(actionbarDrawable);
+//		}
+//		
+//		getActionBar().setIcon(android.R.color.transparent);
+//		getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 	
 	@Override

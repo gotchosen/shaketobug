@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="shaketobug">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/shaketobug-release/shaketobug.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

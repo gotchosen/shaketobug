@@ -112,7 +112,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.shake2bug.android:buttonBarButtonStyle
         */
-        public static final int ButtonBarContainerTheme_buttonBarButtonStyle = 1;
+        public static int ButtonBarContainerTheme_buttonBarButtonStyle = 1;
         /**
           <p>This symbol is the offset where the {@link com.shake2bug.android.R.attr#buttonBarStyle}
           attribute's value can be found in the {@link #ButtonBarContainerTheme} array.
@@ -122,6 +122,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name com.shake2bug.android:buttonBarStyle
         */
-        public static final int ButtonBarContainerTheme_buttonBarStyle = 0;
+        public static int ButtonBarContainerTheme_buttonBarStyle = 0;
     };
 }

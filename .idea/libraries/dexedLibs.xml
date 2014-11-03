@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="dexedLibs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/shaketobug-sample/bin/dexedLibs/android-support-v4-d82ed4d3c911aa0da3deaf7517829485.jar!/" />
+      <root url="jar://$PROJECT_DIR$/shaketobug-sample/bin/dexedLibs/shaketobug-library-d1c187b2f4b70d1b448c97cedcac9482.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
